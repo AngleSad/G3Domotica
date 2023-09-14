@@ -104,6 +104,13 @@ public class calefaccion extends JFrame {
 					// TODO Auto-generated catch block
 					////e1.printStackTrace();
 				}
+				if(cal.size()==0) {
+					for (int i=1;i<=6;i++) {
+						calefa c = new calefa("CALEFACCION"+i);
+						cal.add(c);
+						System.out.println(c.getNom().toString());
+					}
+				}
 				
 					if(cal.get(0).isEncendido()==true) {
 						calefaccion_1.setBackground(Color.GREEN);
@@ -135,13 +142,7 @@ public class calefaccion extends JFrame {
 					} else {
 						calefaccion_6.setBackground(Color.red);
 					}
-					if(cal.size()==0) {
-						for (int i=1;i<=6;i++) {
-							calefa c = new calefa("CALEFACCION"+i);
-							cal.add(c);
-							System.out.println(c.getNom().toString());
-						}
-					}
+					
 					if(login.idioma==true) {
 						btnNewButton_6.setText("EU");
 				    	 btnNewButton_1.setText("TODAS");
